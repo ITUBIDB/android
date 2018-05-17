@@ -100,8 +100,8 @@ android {
 
     defaultConfig {
 
-        manifestPlaceholders.versionCode = "20700000"
-        manifestPlaceholders.versionName = "2.7.0"
+        manifestPlaceholders.versionCode = "20000000"
+        manifestPlaceholders.versionName = "2.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
