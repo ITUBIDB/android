@@ -128,7 +128,8 @@
             android:contentDescription="@string/auth_username"
             android:ems="10"
             android:hint="@string/auth_username"
-            android:inputType="textNoSuggestions"
+            android:inputType="text"
+            android:digits="0123456789_qwertzuiopasdfghjklyxcvbnm"
             android:textColor="@color/login_text_color"
             android:textColorHint="@color/login_text_hint_color"
             android:visibility="gone" />
