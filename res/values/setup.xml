@@ -2,7 +2,7 @@
 <resources>
 
     <!-- App name  and other strings-->
-    <string name="app_name" formatted="false">Kovan</string>
+    <string name="app_name" formatted="false">İTÜ Kovan</string>
     <string name="account_type" formatted="false">ITU</string>	<!-- better if was a domain name; but changing it now would require migrate accounts when the app is updated -->
     <string name="authority" formatted="false">tr.edu.itu</string>
     <string name="document_provider_authority" formatted="false">org.owncloud.documents</string>
@@ -17,7 +17,7 @@
     <string name ="user_agent">Mozilla/5.0 (Android) kovan-android/%1$s</string>
     
     <!-- URLs and flags related -->
-    <string name="server_url" formatted="false">https://kovan.itu.edu.tr</string>
+    <string name="server_url" formatted="false">"https://kovan.itu.edu.tr"</string>
     <bool name="show_server_url_input">false</bool>
     <bool name="show_welcome_link">false</bool>
     <string name="welcome_link_url" formatted="false">"http://bidb.itu.edu.tr"</string>
@@ -30,7 +30,7 @@
     <string name = "send_files_to_other_apps" formatted="false">on</string>
     <bool name = "share_via_link_feature">true</bool>
     <bool name = "share_with_users_feature">true</bool>
-    <bool name = "warning_sharing_public_link" >true</bool>
+    <bool name = "warning_sharing_public_link">true</bool>
     
     <!-- Colors -->
     <color name="login_text_color">#000000</color>
@@ -39,18 +39,18 @@
     <color name="login_logo_background_color">#FFFFFF</color>
     <color name="background_color">#FFFFFF</color>
     <color name="actionbar_start_color">#002857</color>
-    <color name="primary_button_background_color">#002857</color>
+    <color name="primary_button_background_color">#35537a</color>
     <color name="primary_button_text_color">@color/white</color>
     <color name="secondary_button_background_color">#D6D7D7</color>
     <color name="secondary_button_text_color">@color/black</color>
-    <color name="drawer_header_color">#002857</color>
+    <color name="drawer_header_color">#35537a</color>
 
     <!-- Button -->
     <color name="button_text_color">#000000</color>
 
     <!-- Multiselect backgrounds -->
-    <color name="action_mode_background">#FFFFFF</color>
-    <color name="action_mode_status_bar_background">#002857</color>
+    <color name="action_mode_background">@color/primary_button_background_color</color>
+    <color name="action_mode_status_bar_background">@color/actionbar_start_color</color>
 
     <!-- Multiaccount support -->
     <bool name="multiaccount_support">false</bool>
@@ -71,7 +71,7 @@
     <string name="url_app_download" formatted="false">"https://play.google.com/store/apps/details?id=tr.edu.itu.itukovan"</string>
 
     <!--Destination mail for sending log files -->
-    <string name="mail_logger" formatted="false"></string>
+    <string name="mail_logger" formatted="false">sistemdestek@itu.edu.tr</string>
 
     <!-- OAuth2 -->
 
