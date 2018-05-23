@@ -61,7 +61,7 @@
     <bool name="recommend_enabled">false</bool>
     <bool name="feedback_enabled">false</bool>
     <bool name="logger_enabled">false</bool>
-    <bool name="privacy_policy_enabled">false</bool>
+    <bool name="privacy_policy_enabled">true</bool>
     <bool name="wizard_enabled">false</bool>
     <string name="url_privacy_policy" formatted="false">https://owncloud.com/privacy-legal/</string>
     <string name="url_help" formatted="false">http://yardim.itu.edu.tr/</string>

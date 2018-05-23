@@ -53,38 +53,29 @@ dependencies {
     compile "com.android.support:appcompat-v7:${supportLibraryVersion}"
     compile 'com.getbase:floatingactionbutton:1.10.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile group: 'commons-io', name: 'commons-io', version: '2.5'
-
+    compile 'commons-io:commons-io:2.5'
     /// dependencies for local unit tests
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.19'
-
     /// dependencies for instrumented tests
     // JUnit4 Rules
     androidTestCompile 'com.android.support.test:rules:0.5'
-
     // Android JUnit Runner
     androidTestCompile 'com.android.support.test:runner:0.5'
-
     // Espresso core
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-
     // Espresso web
     androidTestCompile 'com.android.support.test.espresso:espresso-web:2.2.2'
-
     // UIAutomator - for cross-app UI tests, and to grant screen is turned on in Espresso tests
     androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
-
     // fix conflict in dependencies; see http://g.co/androidstudio/app-test-app-conflict for details
     androidTestCompile "com.android.support:support-annotations:${supportLibraryVersion}"
-
     // Image loading
-    compile ("com.github.bumptech.glide:glide:4.6.1") {
+    compile('com.github.bumptech.glide:glide:4.6.1') {
         exclude group: "com.android.support"
     }
-
     //Zooming Android ImageView.
-    compile "com.github.chrisbanes:PhotoView:2.0.0"
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
 }
 
 tasks.withType(Test) {
@@ -97,14 +88,10 @@ tasks.withType(Test) {
 android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
-
     defaultConfig {
-
         manifestPlaceholders.versionCode = "20000000"
         manifestPlaceholders.versionName = "2.0.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
         // arguments to be passed to functional tests
         testInstrumentationRunnerArgument "TEST_USER", "\"$System.env.OCTEST_APP_USERNAME\""
         testInstrumentationRunnerArgument "TEST_PASSWORD", "\"$System.env.OCTEST_APP_PASSWORD\""
@@ -116,12 +103,11 @@ android {
         testInstrumentationRunnerArgument "TEST_PASSWORD_ID", "\"$System.env.OCTEST_WEB_PASSFIELD\""
         testInstrumentationRunnerArgument "TEST_SUBMIT_XPATH", "\"$System.env.OCTEST_WEB_SUBMITXPATH\""
         testInstrumentationRunnerArgument "TEST_LOOKUP", "\"$System.env.OCTEST_SERVER_LOOKUP\""
-
         jackOptions {
             enabled false
         }
+        applicationId 'tr.edu.itu.itukovan'
     }
-
     // adapt structure from Eclipse to Gradle/Android Studio expectations;
     // see http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Configuring-the-Structure
     sourceSets {
@@ -150,24 +136,19 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
-
     lintOptions {
         abortOnError false
     }
-
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
     }
-
     adbOptions {
         timeOutInMs(20 * 60 * 1000)
     }
-
     signingConfigs {
         release {
             if (System.env.OC_RELEASE_KEYSTORE) {
@@ -178,7 +159,6 @@ android {
             }
         }
     }
-
     buildTypes {
 
         release {
@@ -191,10 +171,11 @@ android {
             applicationIdSuffix ".debug"
         }
     }
-
     applicationVariants.all { variant ->
         def appName = System.env.OC_APP_NAME
         setOutputFileName(variant, appName, project)
+    }
+    productFlavors {
     }
 }
 
