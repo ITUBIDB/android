@@ -80,6 +80,7 @@ android {
         testInstrumentationRunnerArgument "TEST_PASSWORD_ID", "\"$System.env.OCTEST_WEB_PASSFIELD\""
         testInstrumentationRunnerArgument "TEST_SUBMIT_XPATH", "\"$System.env.OCTEST_WEB_SUBMITXPATH\""
         testInstrumentationRunnerArgument "TEST_LOOKUP", "\"$System.env.OCTEST_SERVER_LOOKUP\""
+        applicationId 'tr.edu.itu.itukovan'
     }
 
     compileOptions {
@@ -128,6 +129,10 @@ android {
         def appName = System.env.OC_APP_NAME
         setOutputFileName(variant, appName, project)
     }
+
+    productFlavors {
+    }
+
 }
 
 // Updates output file names of a given variant to format

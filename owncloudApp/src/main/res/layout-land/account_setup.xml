@@ -162,7 +162,8 @@
                         android:contentDescription="@string/auth_username"
                         android:ems="10"
                         android:hint="@string/auth_username"
-                        android:inputType="textNoSuggestions"
+                        android:inputType="text"
+                        android:digits="0123456789_qwertzuiopasdfghjklyxcvbnm"
                         style="@style/EditText.Authenticator"
                         android:theme="@style/EditText.Authenticator"
                         android:visibility="gone" />
